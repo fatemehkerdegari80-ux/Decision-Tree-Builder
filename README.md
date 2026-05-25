@@ -45,7 +45,7 @@ pip install numpy pandas matplotlib seaborn scikit-learn graphviz
 ## 🧠 Usage
 
 ### 1. Basic Training
-
+```bash
 from DT_Library import DecisionTree
 import pandas as pd
 
@@ -62,31 +62,37 @@ tree = DecisionTree(
 )
 
 tree.fit(X, y)
+```
 
 ### 2. Prediction
-
+```bash
 predictions = tree.predict(X)
 probabilities = tree.predict_proba(X)
+```
 
 ### 3. Evaluation
-
+```bash
 tree.evaluate(X, y, dataset_name="Train Set")
+```
 
 ### 4. Threshold Tuning
-
+```bash
 best_threshold, best_score = tree.tune_threshold(X_val, y_val, metric='f1')
+```
 
 ### 5. Visualizing the Tree
-
+```bash
 tree.visualize_tree(filename="my_tree")
+```
 
 ### 6. Feature Importance
-
+```bash
 importance = tree.get_feature_importance()
 print(importance)
+```
 
 ### 7. Feature Selection
-
+```bash
 from DT_Library import heatmap_gini_filter_clean
 
 clean_df, report = heatmap_gini_filter_clean(
@@ -94,7 +100,7 @@ clean_df, report = heatmap_gini_filter_clean(
     target_col="target",
     threshold=0.01
 )
-
+```
 ---
 
 ## 📌 Notes
